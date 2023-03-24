@@ -60,7 +60,7 @@ document.getElementById("form-login").addEventListener("submit", function(e) {
                 editMessage.innerHTML = "<p style='color:green'> Changement réussi ! </p>";
                 editLogin.appendChild(editMessage);
             } else {
-                editMessage.innerHTML = "<p style='color:red'> Login déjà pris ! </p>";
+                editMessage.innerHTML = res.msg;
                 editLogin.appendChild(editMessage);
             }
         } else if (this.readyState == 4) {
