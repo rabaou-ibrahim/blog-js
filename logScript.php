@@ -17,6 +17,8 @@ if (!empty($_POST['log-pseudo']) AND !empty($_POST['log-mdp']))
                 $sql = "SELECT * FROM utilisateurs WHERE login = '$logPseudo' AND password = '$logMdp'"; 
                 $result = mysqli_query($conn, $sql); // Compter le nombre de ligne ayant rapport a la requette SQL
                 if (mysqli_num_rows($result) > 0) {
+                    $msg = "<p style='color:green'> Connexion  réussie ! </p>";
+                    $success = 1;
                     $row = mysqli_fetch_assoc($result);
                     // Si la ligne contenant le bon login et le bon mot de passe est trouvée dans la bdd,
                     if ($row['login'] === $logPseudo && $row['password'] === $logMdp) {
@@ -27,11 +29,12 @@ if (!empty($_POST['log-pseudo']) AND !empty($_POST['log-mdp']))
                             $_SESSION['logPassword'] .= "*";
                         }
                         $_SESSION['id'] = $row['id'];
+                        $_SESSION['email'] = $row['email'];
                         header("location:profil.php");
                     }
                    
                 } else {
-                    $msg = "<p style='color:red'>Login et/ou mot de passe incorrect/s</p></div>";
+                    $msg = "<p style='color:red'>Login et/ou mot de passe incorrect/s</p>";
                 }
             } else {
                     $msg = "<p style='color:red'> Votre mot de passe ne peut pas dépasser 25 caractères </p>";    

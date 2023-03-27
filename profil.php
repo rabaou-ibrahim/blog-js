@@ -12,7 +12,7 @@
     <header>
         <?php 
             session_start();       
-            if (!isset($_SESSION) || !isset($_SESSION['logUsername']) || !isset($_SESSION['id']) || !isset($_SESSION['logPassword'])){
+            if (!isset($_SESSION) || !isset($_SESSION['id'])){
                 header('location:warning.php'); 
             }
             elseif ($_SESSION['loggedin'] = true) {
@@ -24,6 +24,8 @@
     </header>
 
     <p> Vous pouvez changer vos coordonnées ci-dessous </p>
+
+    <p> NB : Même si les modifications marchent, les nouveaux codes affichés à l'écran ne changent pas </p>
 
     <div class="profile" id="profile">
         <div class="profile-form" id="profile-form">
@@ -54,25 +56,13 @@
 
     <div class="change-password" id="change-password">
         <form class="form-password" id="form-password">
-            <input type="password" name="mdp" placeholder="Nouveau mot de passe" name="new-password" autocomplete="off">
-            <div class="submit-new-password" id="submit-new-password">
+            <input type="password" placeholder="Nouveau mot de passe" name="new-password" autocomplete="off">
+            <button class="submit-new-password" id="submit-new-password">
                 <img src="Images/swap-symbol.png" width="30px" height="30px">
-            </div>
+            </button>
+            <div class="edit-message" id="edit-message"></div>
         </form>
             <button class="password-comeback" id="password-comeback">
-                Retour
-            </button>
-    </div>
-
-    <div class="change-confirmed-password" id="change-confirmed-password">  
-        <form class="form-confirmed-password" id="form-confirmed-password">
-            <label for="mdp-confirm">Confirmez votre mot de passe</label>
-            <input id="mdp-confirm" type="password" name="mdp-confirm" placeholder="Confirmation nouveau mot de passe"  name="new-confirmed-password" autocomplete="off">
-            <button class="submit-new-confirmed-password" id="submit-new-confirmed-password">
-                <img src="Images/swap-symbol.png" width="30px" height="30px">
-            </button>
-        </form>
-            <button class="confirmed-password-comeback" id="confirmed-password-comeback">
                 Retour
             </button>
     </div>

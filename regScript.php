@@ -41,7 +41,6 @@ if (!empty($_POST['pseudo']) AND !empty($_POST['email']) AND !empty($_POST['mdp'
                                         {
                                             $msg = "<p style='color:green'> Inscription réussie ! </p>";
                                             $success = 1;
-                                            $msg = "";
                                         }
                                         else {
                                             $msg = "<p style='color:red'> Erreur non identifiée ! </p>";

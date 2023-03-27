@@ -102,32 +102,6 @@ header {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.change-password-confirm{
-    display: flex;
-    flex-direction: row;
-    height: 400px;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto; 
-    justify-content: center;
-    align-items: center;
-}
-
-.form-password-confirm{
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    block-size: 400px;
-    width: 500px;
-    background: #fff;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 input{
     width:100%;
     border: 2px solid black;
