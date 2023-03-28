@@ -24,7 +24,7 @@ document.getElementById("connexion-btn").addEventListener("click", function(){
     logMessage.style.display = 'block';
 });
 
-// on ajoute peu-être un AddEvent listener pour souligner le message regMes et changer la couleur
+// on ajoute peut-être un AddEvent listener pour souligner le message regMes et changer la couleur
 
 document.getElementById("registration-btn").addEventListener("click", function(){          
     regTitle.style.display = 'block';

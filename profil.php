@@ -25,7 +25,7 @@
 
     <p> Vous pouvez changer vos coordonnées ci-dessous </p>
 
-    <p> NB : Même si les modifications marchent, les nouveaux codes affichés à l'écran ne changent pas </p>
+    <p> NB : Même si les modifications marchent, les nouveaux codes ne sont pas affichés à l'écran. Ils seront visibles lors de votre prochaine connexion. </p>
 
     <div class="profile" id="profile">
         <div class="profile-form" id="profile-form">

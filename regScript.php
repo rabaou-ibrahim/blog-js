@@ -5,7 +5,7 @@ session_start();
 $success = 0;
 $msg = "Une erreur est survenue (script.php)";
 
-if (!empty($_POST['pseudo']) AND !empty($_POST['email']) AND !empty($_POST['mdp']))
+if (!empty($_POST['pseudo']) AND !empty($_POST['email']) AND !empty($_POST['mdp']) AND !empty($_POST['confirmed-mdp']))
     {
         $pseudo = htmlspecialchars((strip_tags($_POST['pseudo'])));
         $email = htmlspecialchars((strip_tags($_POST['email'])));
@@ -43,7 +43,7 @@ if (!empty($_POST['pseudo']) AND !empty($_POST['email']) AND !empty($_POST['mdp'
                                             $success = 1;
                                         }
                                         else {
-                                            $msg = "<p style='color:red'> Erreur non identifiée ! </p>";
+                                            $msg = "<p style='color:red'> Erreur non identifiée ! (Requête fausse ?) </p>";
                                         }
                                     } else {
                                         $msg = "<p style='color:red'>Mot de passe déjà pris</p>";
