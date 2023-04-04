@@ -10,23 +10,52 @@
 </head>
 <body>
     <header>
-        <h2>Blog de Rabaou et Adam</h2>
-        <!-- <div class="menu">
+        <br>
+        <h2 class="blog-title">par Adam et Rabaou</h2>
 
-        </div> -->
+        <h1>ACTU SPORT</h1>
     </header>
     <div class="container">
         <div class="container-1">
-            <p class="intro"> Un blog qui regroupe des articles pour suivre l'actualité foot !</p>
-            <div class="articles"></div>
-            <div class="">//On prend un article</div>
+            <p class="intro"> Un blog ouvert à tout le monde (rédacteurs, abonnés) qui regroupe des articles pour suivre l'actualité sportive !</p>
+            <div class="articles">
+                <?php
+                 require("blog/refactoring.php");
+
+                 $parpage = 3;
+                 $nombreTotal = pargination();
+                 
+                 $noPage =1;
+                 $pages = ceil($nombreTotal/$parpage);
+                   if(isset($_GET['page'])){
+                     $noPage = $_GET['page'];
+                   }
+                 // récuperer les tous les articles  de ma  basse de données  
+                 $posts = selectAll($noPage, $parpage);
+                 foreach($posts as $post):
+                ?>
+                <div class="post">
+                    <br>
+                    <img src="<?php echo 'blog/images/'.$post['image']?>" alt="mon image" class="slider-image" width="100px" height="100px">
+                    <div class="post-info">
+                        <h4><?php echo $post['title']?></h4>
+                        <i><?php echo $post['author']?> </i>
+                        &nbsp;
+                        <i> <?php echo date('d, m, y', strtotime($post['created_at']))?></i>
+                        <div class="line"></div>
+                    </div>
+                    <br>
+                </div>
+                <?php endforeach; ?>
+            </div>
+            <div class=""></div>
         </div>
         <div class="container-2">
-            <h3>Intéressés ?!</h3>
+            <h3>Vous souhaitez participer ?</h3>
             <div class="green-arrow">
                 <img src="Images/green-arrow.png" width="50px" height="50px">
             </div>
-            <a href="authentification.php"><button class='call-to'> Abonnez-vous !</button></a>  
+            <a href="authentification.php"><button class='call-to'>Cliquez ici !</button></a>  
         </div> 
     </div>
 

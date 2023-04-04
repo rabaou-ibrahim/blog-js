@@ -27,7 +27,7 @@
             <div id="already-subscribed" class="already-subscribed">
                 Déjà inscrit ? Connectez-vous
                 <div id="connexion-btn" class="connexion-btn">
-                    ici
+                    ICI
                 </div>
             </div>
             <div id="reg-message" class="reg-message">
@@ -48,7 +48,7 @@
             <div id="not-subscribed" class="not-subscribed">
                 Pas encore inscrit ? Enregistrez-vous
                 <div id="registration-btn" class="registration-btn">
-                    ici
+                   ICI
                 </div>
             </div>
             <div id="log-message" class="log-message">

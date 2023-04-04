@@ -1,13 +1,33 @@
+@font-face {
+  font-family: 'SIMPLIFICA';
+  src: url('Font/SIMPLIFICA.ttf');
+}
+
 body{
     background: #35dc9b;
     background: linear-gradient(to bottom, #35dc9b, #3857af);
-    font-family: Arial;
+    font-family: 'Lora', serif;
     margin-left: 50px;
     margin-right: 50px;
 }
 
 header {
     text-align: center;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 120px;
+    width: auto;
+    background: beige;
+}
+
+header .h1 {
+  font-family: 'SIMPLIFICA';
+}
+
+.blog-title{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: small;
+  font-style: italic;
 }
 
 .intro{
@@ -16,25 +36,72 @@ header {
 }
 
 .articles {
-    height: 500px;
-    width: 750px;
+    height: 700px;
+    width: 800px;
     background: #fff;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .container {
-    margin-top: 75px;
+    background: beige;
+    height: 850px;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.container .main-content {
+    height: auto;
+    margin: auto;
+  }
+  
+  .container .main-content.single {
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+  }
+
+  .container .post{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 200px;
+  }
+  
+  .container .main-content.single .post-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .container .main-content.single .post-image{
+    margin-top: 15px;
+    height: 400px;
+    width: 100%;
+  }
+  .container .main-content.single .post-image img{
+    margin-top: 15px;
+    height: 100%;
+    width: 100%;
+    
+  }
 
 .container-2{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.line{
+    margin-top: 5px;
+    border: 1px solid green;
+    width: 500px;
 }
 
 .call-to{

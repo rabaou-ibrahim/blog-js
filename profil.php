@@ -17,7 +17,7 @@
             }
             elseif ($_SESSION['loggedin'] = true) {
                 echo ("<li><h4>Numéro id : ".$_SESSION['id']." </h4></li>");
-                echo ("<li><h4>Nom du login connecté : ".$_SESSION['logUsername']." </h4></li>");
+                echo ("<li><a href='blog/index.php' style='color:black'><h2 style:'color=red'>VOIR LES ARTICLES</h2></a>");
                 echo ("<li><a href='require/deconnexion.php'><img src='Images/button-power.png' width='75px' height='75px'></a></li>");
             }
         ?>
@@ -25,7 +25,7 @@
 
     <p> Vous pouvez changer vos coordonnées ci-dessous </p>
 
-    <p> NB : Même si les modifications marchent (on les voit dans la base de données), les nouveaux codes ne sont pas affichés à l'écran. Ils seront visibles lors de votre prochaine connexion (où vous devrez utiliser vos nouveaux codes !). </p>
+    <p> Ou alors lire, ajouter et modifier des articles en cliquant sur la rubrique "Articles" </p>
 
     <div class="profile" id="profile">
         <div class="profile-form" id="profile-form">
